@@ -8,7 +8,7 @@ import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser'
 })
 export class HomePage {
   
-  url : string = 'http://meira-cdc.co';
+  url : string = 'http://scpt.barranquilla.gov.co:8079/cdc-v2';
 
   constructor(public navCtrl: NavController, private iab: InAppBrowser) {
     
@@ -29,9 +29,11 @@ export class HomePage {
       hideurlbar: 'yes',
       toolbar : 'no',
       fullscreen : 'yes',
-      useWideViewPort : 'yes'
+      useWideViewPort : 'yes',
+      clearsessioncache: 'yes',
+      clearcache: 'yes'
     }
-    const browser = this.iab.create(url,'_blank',options);
+    this.iab.create(url,'_blank',options);
   }
 
 }
