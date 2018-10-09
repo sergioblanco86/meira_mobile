@@ -1,0 +1,7 @@
+{
+  "name": "meiraMobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
